@@ -1,0 +1,56 @@
+
+01. Test constructor initializes correctly with valid tokens/price feeds
+02. Test constructor reverts with mismatched token/price feed lengths
+03. Test constructor reverts with duplicate tokens
+04. Test getUsdValue returns correct amount for ETH
+05. Test getUsdValue returns correct amount for BTC
+06. Test getTokenAmountFromUsd returns correct amount
+07. Test getTokenAmountFromUsd handles zero price
+08. Test getTokenAmountFromUsd handles negative price
+09. Test depositCollateral reverts with zero amount
+10. Test depositCollateral reverts with unapproved token
+11. Test depositCollateral succeeds with approved token
+12. Test depositCollateral updates user balance correctly
+13. Test depositCollateral emits event
+14. Test depositCollateralAndMintDsc works end-to-end
+15. Test mintDsc reverts with zero amount
+16. Test mintDsc reverts if health factor broken
+17. Test mintDsc succeeds with sufficient collateral
+18. Test mintDsc updates minted amount correctly
+19. Test redeemCollateral reverts with zero amount
+20. Test redeemCollateral reverts if health factor broken
+21. Test redeemCollateral succeeds with sufficient collateral
+22. Test redeemCollateral updates balances correctly
+23. Test redeemCollateral emits event
+24. Test redeemCollateralsForDsc works end-to-end
+25. Test burnDsc reverts with zero amount
+26. Test burnDsc succeeds and updates balances
+27. Test burnDsc improves health factor
+28. Test liquidate reverts if health factor OK
+29. Test liquidate succeeds when undercollateralized
+30. Test liquidate calculates bonus correctly
+31. Test liquidate reverts if bonus exceeds collateral
+32. Test liquidate improves target health factor
+33. Test liquidate doesn't worsen liquidator's health
+34. Test getAccountInformation returns correct values
+35. Test getAccountCollateralValue sums correctly
+36. Test healthFactor calculates correctly
+37. Test healthFactor handles zero debt
+38. Test healthFactor handles zero collateral
+39. Test reentrancy protection works on all state-changing functions
+40. Test transfer failures revert properly
+41. Test price feed staleness checks
+42. Test multiple collateral types interaction
+43. Test maximum uint256 values don't overflow
+44. Test minimum health factor edge cases
+45. Test partial liquidation scenarios
+46. Test full liquidation scenarios
+47. Test protocol insolvency edge cases
+48. Test different recipient scenarios
+49. Test repeated operations stress test
+50. Test malicious token contract interactions
+51. Test liquidation bonus doesn't exceed available collateral
+52. Test price feed precision matches Chainlink decimals
+53. Test health factor division precision loss
+54. Test CEI pattern violations in state changes
+55. Test collateral redemption without token check
